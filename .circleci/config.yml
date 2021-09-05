@@ -20,6 +20,9 @@ jobs:
           name: build UI
           command: |
             npm run frontend:build
+      - run:
+          name: previous folder
+            cd ..
   build-back:
     docker:
       - image: "cimg/base:stable"
