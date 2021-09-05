@@ -22,6 +22,7 @@ jobs:
             npm run frontend:build
       - run:
           name: previous folder
+          command: |
             cd ..
   build-back:
     docker:
