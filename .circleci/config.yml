@@ -22,7 +22,7 @@ jobs:
             npm run frontend:build
   build-back:
     docker:
-      -image: "cimg/base:stable"
+      - image: "cimg/base:stable"
     steps:
       - node/install
       - run:
@@ -35,5 +35,7 @@ jobs:
             npm run backend:build
 workflows:
   udagram:
-    jobs: -build-front
-      -build-back
+    jobs:
+      # build
+      - build-front
+      - build-back
